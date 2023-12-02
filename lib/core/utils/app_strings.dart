@@ -22,6 +22,9 @@ class AppStrings{
   static const String location = 'Your Location';
   static const String price = 'Price';
   static const String workingDays = 'working days';
+  static const String startTime = 'Start Time';
+  static const String endTime = 'End Time';
+
   static const String pleaseEnterValidSpecialization = 'Please Enter Valid Specialization';
   static const String pleaseEnterValidLocation = 'Please Enter Valid Location';
   static const String pleaseEnterValidPrice = 'Please Enter Valid Price';

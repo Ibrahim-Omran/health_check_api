@@ -57,10 +57,7 @@ class SignUpPatientScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -78,10 +75,7 @@ class SignUpPatientScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -103,10 +97,7 @@ class SignUpPatientScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 800.ms),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -129,10 +120,7 @@ class SignUpPatientScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 800.ms),
+                          ),
 
                           SizedBox(
                             height: 25.h,
@@ -146,10 +134,7 @@ class SignUpPatientScreen extends StatelessWidget {
                                   .validate()) {}
                             },
                             text: AppStrings.signUp,
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 2.seconds),
+                          ),
 
                           SizedBox(
                             height: 30.h,

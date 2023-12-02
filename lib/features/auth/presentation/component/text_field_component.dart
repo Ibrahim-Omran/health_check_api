@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -9,10 +10,13 @@ class TextFieldComponent extends StatelessWidget {
     super.key,
     required this.icon,
     this.hintText,
-    required this.controller,
+    this.controller,
     this.iconSuffix,
     this.suffixIconOnPressed,
-    this.obscureText = false, this.validator, this.keyboardType,
+    this.obscureText = false,
+    this.validator,
+    this.keyboardType,
+    this.readOnly = false,
 
   });
 
@@ -20,10 +24,11 @@ class TextFieldComponent extends StatelessWidget {
   final String? hintText;
   final IconData? iconSuffix;
   final Function()? suffixIconOnPressed;
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final bool obscureText;
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
+  final bool readOnly;
 
   @override
   Widget build(BuildContext context) {
@@ -62,12 +67,13 @@ class TextFieldComponent extends StatelessWidget {
         ),
         Flexible(
           child: SizedBox(
-            width: 250.w,
+            width: 280.w,
             height: 66.h,
             child: CustomTextFormField(
               controller: controller,
               hintText: hintText,
               iconSuffix: iconSuffix,
+              readOnly: readOnly,
               suffixIconOnPressed: suffixIconOnPressed,
               obscureText: obscureText,
               validator: validator,
@@ -76,6 +82,7 @@ class TextFieldComponent extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ).animate().fade(delay: 250.ms)
+        .slideX(duration: 800.ms);
   }
 }

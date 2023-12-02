@@ -62,10 +62,7 @@ class LoginScreen extends StatelessWidget {
                             },
 
 
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 2.h,
@@ -90,10 +87,7 @@ class LoginScreen extends StatelessWidget {
                             },
 
 
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 800.ms),
+                          ),
 
                           SizedBox(
                             height: 46.h,
@@ -109,10 +103,7 @@ class LoginScreen extends StatelessWidget {
 
                             },
                             text: AppStrings.logIn,
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 2.seconds),
+                          ),
 
                           SizedBox(
                             height: 30.h,
@@ -135,15 +126,6 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 // animated
 // =>  .animate().fade(delay: 250.ms).slideX(duration: 3.seconds),

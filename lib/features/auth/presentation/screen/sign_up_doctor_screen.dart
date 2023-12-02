@@ -11,6 +11,7 @@ import 'package:iconly/iconly.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widget/custom_buttom.dart';
 import '../component/app_bar_colors.dart';
+import '../component/selected_time_component.dart';
 import '../component/text_field_component.dart';
 
 class SignUpDoctorScreen extends StatelessWidget {
@@ -57,10 +58,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -78,10 +76,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -99,10 +94,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -124,10 +116,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 800.ms),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -150,10 +139,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 800.ms),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -166,14 +152,12 @@ class SignUpDoctorScreen extends StatelessWidget {
                             hintText: AppStrings.specialization,
                             validator: (data) {
                               if (data!.isEmpty) {
-                                return AppStrings.pleaseEnterValidSpecialization;
+                                return AppStrings
+                                    .pleaseEnterValidSpecialization;
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -190,10 +174,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -211,10 +192,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
 
                           SizedBox(
                             height: 5.h,
@@ -231,16 +209,20 @@ class SignUpDoctorScreen extends StatelessWidget {
                               }
                               return null;
                             },
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 1.seconds),
+                          ),
+
+                          SizedBox(
+                            height: 5.h,
+                          ),
+
+                          // start & end time
+                          SelectedTimeComponent(cubit: cubit),
 
                           SizedBox(
                             height: 25.h,
                           ),
 
-                          // SignUp Patient button
+                          // SignUp Doctor button
                           CustomButton(
                             height: 60.h,
                             onPressed: () {
@@ -248,10 +230,7 @@ class SignUpDoctorScreen extends StatelessWidget {
                                   .validate()) {}
                             },
                             text: AppStrings.signUp,
-                          )
-                              .animate()
-                              .fade(delay: 250.ms)
-                              .slideX(duration: 2.seconds),
+                          ),
 
                           SizedBox(
                             height: 30.h,
@@ -276,3 +255,4 @@ class SignUpDoctorScreen extends StatelessWidget {
     );
   }
 }
+

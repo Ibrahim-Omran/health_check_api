@@ -7,7 +7,7 @@ import '../utils/app_colors.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.controller,
+     this.controller,
     this.hintText,
     this.labelText,
     this.validator,
@@ -15,9 +15,10 @@ class CustomTextFormField extends StatelessWidget {
     this.iconSuffix,
     this.suffixIconOnPressed,
     this.keyboardType,
+    this.readOnly = false,
   });
 
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String? hintText;
   final String? labelText;
   final String? Function(String?)? validator;
@@ -26,6 +27,7 @@ class CustomTextFormField extends StatelessWidget {
   final VoidCallback? suffixIconOnPressed;
   final TextInputType? keyboardType;
 
+  final bool readOnly;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -34,6 +36,7 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator,
       obscureText: obscureText,
       keyboardType: keyboardType,
+      readOnly: readOnly,
       decoration: InputDecoration(
         //border: BorderSide(color: AppColors.grey),
         hintText: hintText,
