@@ -3,6 +3,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_check/core/utils/app_strings.dart';
+import 'package:health_check/core/utils/commons.dart';
 import 'package:health_check/core/widget/custom_buttom.dart';
 import 'package:health_check/features/auth/presentation/component/doctor_or_patient_component.dart';
 import 'package:health_check/features/auth/presentation/component/text_field_component.dart';
@@ -10,6 +11,7 @@ import 'package:health_check/features/auth/presentation/cubit/login_cubit/login_
 import 'package:health_check/features/auth/presentation/cubit/login_cubit/login_state.dart';
 import 'package:iconly/iconly.dart';
 
+import '../../../../core/routes/app_routes.dart';
 import '../component/app_bar_colors.dart';
 import '../component/logo_login_signup_component.dart';
 
@@ -99,7 +101,9 @@ class LoginScreen extends StatelessWidget {
                             onPressed: () {
                               if (cubit.loginKey.currentState!
                                   .validate()) {
+                                navigate(context: context, route: Routes.home);
                               }
+
 
                             },
                             text: AppStrings.logIn,

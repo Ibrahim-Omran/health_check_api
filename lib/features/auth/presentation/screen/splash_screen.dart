@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:health_check/core/utils/app_assets.dart';
 
+import '../../../../core/database/cache_helper.dart';
 import '../../../../core/routes/app_routes.dart';
+import '../../../../core/service/service_locator.dart';
+import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/commons.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,8 +24,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
   // wait some time and navigate to login screen
   void navigateAfterThreeSeconds() {
-    Future.delayed(const Duration(seconds: 3)).then((value)  {
-      navigate(context: context, route: Routes.login);
+    bool isVisited =
+        sl<CacheHelper>().getData(key: AppStrings.onBoardingKey) ?? false;
+
+    Future.delayed(const Duration(seconds: 3), () {
+      navigate(
+        context: context,
+        route: isVisited ? Routes.login : Routes.onBoarding,
+      );
     });
   }
 

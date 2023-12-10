@@ -1,4 +1,4 @@
-class AppStrings{
+class AppStrings {
 
   // login Screen
   static const String logIn = 'Log In';
@@ -12,7 +12,6 @@ class AppStrings{
   static const String pleaseEnterValidPassword = 'Please Enter Valid Password';
   static const String email = 'Email';
 
-
   // sign Up
   static const String signUp = 'Sign Up';
   static const String name = 'name';
@@ -25,16 +24,38 @@ class AppStrings{
   static const String startTime = 'Start Time';
   static const String endTime = 'End Time';
 
-  static const String pleaseEnterValidSpecialization = 'Please Enter Valid Specialization';
+  static const String pleaseEnterValidSpecialization =
+      'Please Enter Valid Specialization';
   static const String pleaseEnterValidLocation = 'Please Enter Valid Location';
   static const String pleaseEnterValidPrice = 'Please Enter Valid Price';
-  static const String pleaseEnterValidWorkingDays = 'Please Enter Valid Working Days';
-
+  static const String pleaseEnterValidWorkingDays =
+      'Please Enter Valid Working Days';
 
   static const String phoneNumber = 'phone number';
   static const String confirmPassword = 'Confirm Password';
   static const String forgetPassword = 'forgetPassword';
   static const String haveAnAccount = 'have account?';
   static const String createAnAccountHere = 'Create an account here';
+
+  // onBoarding
+  static const String onBoardingTitleOne =
+      "you can easily know the result of the chest X-ray";
+  static const String onBoardingSubTitleOne =
+      "you will upload  the chest X-ray images then know the result of your x-ray and your doctor can see the  result";
+
+  static const String onBoardingTitleTwo = "easily know about your disease ";
+  static const String onBoardingSubTitleTwo =
+      "learn about chest diseases such as pneumonia and every thing new  about the disease";
+
+  static const String onBoardingTitleThree = "Get a doctor easily for your disease";
+  static const String onBoardingSubTitleThree =
+      "you will find a great doctors  ";
+
+  static const String onBoardingKey = "onBoarding";
+  static const skip = "skip";
+  static const next = "Next";
+  static const String started = "STARTED";
+  static const String back = "BACK";
+
 
 }

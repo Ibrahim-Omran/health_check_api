@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 void navigate({
   required BuildContext context,
@@ -53,15 +54,15 @@ void navigateReplacement({
 //   }
 // }
 //
-// // Pick Image ..
-// Future<XFile?> pickImage(ImageSource source)async{
-//   XFile? image = await ImagePicker().pickImage(source: source);
-//   if(image != null){
-//     return image ;
-//   }else{
-//     return null ;
-//   }
-// }
+// Pick Image ..
+Future<XFile?> pickImage(ImageSource source)async{
+  XFile? image = await ImagePicker().pickImage(source: source);
+  if(image != null){
+    return image ;
+  }else{
+    return null ;
+  }
+}
 //
 // // عشان اقدر اخزن الصورة في api
 // Future uploadImageToApi(XFile image) async {
