@@ -27,8 +27,8 @@ class _SplashScreenState extends State<SplashScreen> {
     bool isVisited =
         sl<CacheHelper>().getData(key: AppStrings.onBoardingKey) ?? false;
 
-    Future.delayed(const Duration(seconds: 3), () {
-      navigate(
+    Future.delayed(const Duration(seconds: 2), () {
+      navigateReplacement(
         context: context,
         route: isVisited ? Routes.login : Routes.onBoarding,
       );

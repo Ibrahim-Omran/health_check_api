@@ -7,7 +7,6 @@ import 'package:health_check/core/utils/commons.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
-import '../../../../core/widget/custom_buttom.dart';
 
 class DoctorOrPatientComponent extends StatelessWidget {
   const DoctorOrPatientComponent({super.key});
