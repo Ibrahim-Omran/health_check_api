@@ -51,6 +51,9 @@ dependencies:
   image_picker: ^0.8.4+2
   sqflite: ^2.3.0
   smooth_page_indicator: ^1.1.0
+  google_nav_bar: ^5.0.6
+  url_launcher: ^6.2.2
+
 
 
 

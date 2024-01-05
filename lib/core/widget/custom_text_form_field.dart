@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import '../utils/app_colors.dart';
 
 
@@ -16,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIconOnPressed,
     this.keyboardType,
     this.readOnly = false,
+    this.enabledBorder, this.focusedBorder, this.hintStyle,
   });
 
   final TextEditingController? controller;
@@ -26,6 +25,9 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? iconSuffix;
   final VoidCallback? suffixIconOnPressed;
   final TextInputType? keyboardType;
+  final InputBorder? enabledBorder;
+  final InputBorder? focusedBorder;
+  final TextStyle? hintStyle;
 
   final bool readOnly;
   @override
@@ -41,10 +43,13 @@ class CustomTextFormField extends StatelessWidget {
         //border: BorderSide(color: AppColors.grey),
         hintText: hintText,
         labelText: labelText,
+        hintStyle: hintStyle,
         //contentPadding: const EdgeInsets.only( bottom: 10),
 
 
         //icon: Icon(Icons.face),
+        enabledBorder: enabledBorder,
+        focusedBorder: focusedBorder,
 
         suffixIcon: IconButton(
           onPressed: suffixIconOnPressed,

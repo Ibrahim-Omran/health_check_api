@@ -64,8 +64,8 @@ ThemeData getAppTheme() {
     // text button Style ..
     textButtonTheme: TextButtonThemeData(
 
-      style: ButtonStyle(
 
+      style: ButtonStyle(
         foregroundColor: MaterialStateProperty.all(
           AppColors.grey,
         ),

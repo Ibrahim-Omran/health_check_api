@@ -52,10 +52,27 @@ class AppStrings {
       "you will find a great doctors  ";
 
   static const String onBoardingKey = "onBoarding";
-  static const skip = "skip";
-  static const next = "Next";
+  static const String skip = "skip";
+  static const String next = "Next";
   static const String started = "STARTED";
   static const String back = "BACK";
+
+  // Home
+  static const String home = "Home";
+  static const String profile = "Profile";
+  static const String welcome = "Welcome";
+  static const String areYouFallingSick = "Are you felling sick ?";
+  static const String emergency = "Emergency";
+  static const String contacts = "Contacts";
+  static const String phone = "Phone";
+  static const String save = "Save";
+  static const String callNow = "Call Now";
+  static const String delete = "Delete";
+  static const String category = "Category";
+  static const String scanXray = "Scan Xray";
+  static const String findDoctor = "Find Doctor";
+
+
 
 
 }

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_check/core/utils/app_strings.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../core/database/cache_helper.dart';
+import '../../../../core/database/cache/cache_helper.dart';
 import '../../../../core/routes/app_routes.dart';
 import '../../../../core/service/service_locator.dart';
 import '../../../../core/utils/app_colors.dart';

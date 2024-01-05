@@ -13,4 +13,8 @@ class AppAssets{
   static const String onBoardingImage2 = "${baseUrl}onBoardingTwo.png";
   static const String onBoardingImage3 = "${baseUrl}onBoardingThree.png";
 
+
+  static const String scanXray = "${baseUrl}scanXray.png";
+  static const String findDoctor = "${baseUrl}findDoctor.png";
+
 }
