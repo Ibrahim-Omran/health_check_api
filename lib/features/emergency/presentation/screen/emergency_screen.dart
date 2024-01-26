@@ -23,7 +23,7 @@ class EmergencyScreen extends StatelessWidget {
           return Column(
             children: [
 
-              const BackGroundColorWidget(),
+              const BackGroundColorWidget(text: AppStrings.emergency,),
 
               Container(
                 height: 50.h,

@@ -48,7 +48,7 @@ class DoctorOrPatientComponent extends StatelessWidget {
             InkWell(
               onTap: () {
                 // navigate to sign up doctor..
-                navigate(context: context, route: Routes.signUpDoctor);
+               // navigate(context: context, route: Routes.signUpDoctor);
               },
               child: Text(
                 AppStrings.doctor,
@@ -89,7 +89,7 @@ class DoctorOrPatientComponent extends StatelessWidget {
             InkWell(
               onTap: () {
                 // navigate to sign up patient..
-                navigate(context: context, route: Routes.signUpPatient);
+               // navigate(context: context, route: Routes.signUp);
               },
               child: Text(
                 AppStrings.patient,

@@ -62,14 +62,24 @@ class AppStrings {
   static const String profile = "Profile";
   static const String welcome = "Welcome";
   static const String areYouFallingSick = "Are you felling sick ?";
+  static const String category = "Category";
   static const String emergency = "Emergency";
+  static const String scanXray = "Scan Xray";
+
+  // Emergency
   static const String contacts = "Contacts";
   static const String phone = "Phone";
   static const String save = "Save";
   static const String callNow = "Call Now";
   static const String delete = "Delete";
-  static const String category = "Category";
-  static const String scanXray = "Scan Xray";
+
+  // Scan Xray
+  static const String xRayChest = "X_Ray\nChest";
+  static const String xRayChestTwo = "X_Ray Chest";
+  static const String xRaySkull = "X_Ray\nSkull ";
+  static const String xRaySkullTwo = "X_Ray Skull ";
+
+  // Find Doctor
   static const String findDoctor = "Find Doctor";
 
 

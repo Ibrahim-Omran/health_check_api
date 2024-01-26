@@ -4,17 +4,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_check/features/auth/presentation/component/have_an_account_component.dart';
 import 'package:health_check/features/auth/presentation/component/logo_login_signup_component.dart';
-import 'package:health_check/features/auth/presentation/cubit/signup_patient_cubit/sign_up_patient_cubit.dart';
-import 'package:health_check/features/auth/presentation/cubit/signup_patient_cubit/sign_up_patient_state.dart';
 import 'package:iconly/iconly.dart';
 
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/widget/custom_buttom.dart';
 import '../component/app_bar_colors.dart';
 import '../component/text_field_component.dart';
+import '../cubit/sign_up_cubit/sign_up_cubit.dart';
+import '../cubit/sign_up_cubit/sign_up_state.dart';
 
-class SignUpPatientScreen extends StatelessWidget {
-  const SignUpPatientScreen({super.key});
+
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +28,10 @@ class SignUpPatientScreen extends StatelessWidget {
               const AppBarColorsComponent(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 35),
-                child: BlocConsumer<SignUpPatientCubit, SignUpPatientState>(
+                child: BlocConsumer<SignUpCubit, SignUpState>(
                   listener: (context, state) {},
                   builder: (context, state) {
-                    final cubit = BlocProvider.of<SignUpPatientCubit>(context);
+                    final cubit = BlocProvider.of<SignUpCubit>(context);
                     return Form(
                       key: cubit.signUpPatientKey,
                       child: Column(
@@ -123,9 +125,53 @@ class SignUpPatientScreen extends StatelessWidget {
                           ),
 
                           SizedBox(
-                            height: 25.h,
+                            height: 10.h,
                           ),
 
+                          // patient or doctor
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // patient
+                                Row(
+                                  children: [
+                                    Radio(
+                                      activeColor: AppColors.primary,
+                                      value: 'patient',
+                                      groupValue: cubit.typeVal,
+                                      onChanged: (val) {
+                                        cubit.changeTypeAccount(val);
+                                      },
+                                    ),
+                                    const Text(AppStrings.patient),
+                                  ],
+                                ),
+
+                                const Spacer(),
+
+                                //doctor
+                                Row(
+                                  children: [
+                                    Radio(
+                                      activeColor: AppColors.primary,
+                                      value: 'doctor',
+                                      groupValue: cubit.typeVal,
+                                      onChanged: (val) {
+                                        cubit.changeTypeAccount(val);
+                                      },
+                                    ),
+                                    const Text(AppStrings.doctor),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+
+                          SizedBox(
+                            height: 10.h,
+                          ),
                           // SignUp Patient button
                           CustomButton(
                             height: 60.h,

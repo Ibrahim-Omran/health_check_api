@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_check/core/utils/app_assets.dart';
+import 'package:health_check/core/utils/commons.dart';
+import '../../../../core/routes/app_routes.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../component/category_component.dart';
 import '../component/emergency_component.dart';
@@ -56,13 +59,14 @@ class HomeBodyScreen extends StatelessWidget {
 
               FittedBox(
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     CategoryComponent(
                       url: AppAssets.scanXray,
                       title: AppStrings.scanXray,
                       onTap: (){
+                        navigate(context: context, route: Routes.xRay);
 
                       },
                     ),
@@ -79,7 +83,7 @@ class HomeBodyScreen extends StatelessWidget {
 
                   ],
                 ),
-              ),
+              ).animate().fade(delay: 50.ms).scale(duration: 700.ms),
 
               SizedBox(
                 height: 20.h,

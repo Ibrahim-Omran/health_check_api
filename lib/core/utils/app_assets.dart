@@ -15,6 +15,9 @@ class AppAssets{
 
 
   static const String scanXray = "${baseUrl}scanXray.png";
+  static const String chestXray = "${baseUrl}chest_x_ray.png";
+  static const String skullXray = "${baseUrl}X_Ray_Skull.png";
+  static const String scanChestXray = "${baseUrl}scan_chest.png";
   static const String findDoctor = "${baseUrl}findDoctor.png";
 
 }

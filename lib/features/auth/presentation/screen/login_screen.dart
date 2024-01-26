@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:health_check/core/utils/app_colors.dart';
 import 'package:health_check/core/utils/app_strings.dart';
 import 'package:health_check/core/utils/commons.dart';
 import 'package:health_check/core/widget/custom_buttom.dart';
@@ -99,10 +100,13 @@ class LoginScreen extends StatelessWidget {
                           CustomButton(
                             height: 60.h,
                             onPressed: () {
-                              if (cubit.loginKey.currentState!
-                                  .validate()) {
-                                navigate(context: context, route: Routes.home);
-                              }
+
+                              navigate(context: context, route: Routes.home);
+
+                              // if (cubit.loginKey.currentState!
+                              //     .validate()) {
+                              //   navigate(context: context, route: Routes.home);
+                              // }
 
 
                             },
@@ -114,8 +118,40 @@ class LoginScreen extends StatelessWidget {
                           ),
 
 
+                          // new member
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                AppStrings.newMember,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .displayMedium!
+                                    .copyWith(fontSize: 18),
+                              ),
+
+                              SizedBox(
+                                width: 5.w,
+                              ),
+                              InkWell(
+                                onTap: (){
+                                  // navigate to sign up doctor..
+                                  navigate(context: context, route: Routes.signUp);
+                                },
+                                child: Text(
+                                  AppStrings.signUp,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .displayLarge!
+                                      .copyWith(color: AppColors.primary),
+                                ),
+                              ),
+                            ],
+                          ),
+
+
                           // doctor OR patient
-                          const DoctorOrPatientComponent(),
+                           //const DoctorOrPatientComponent(),
 
                         ],
                       ),

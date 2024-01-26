@@ -7,8 +7,10 @@ import '../utils/app_strings.dart';
 class BackGroundColorWidget extends StatelessWidget {
   const BackGroundColorWidget({
     super.key,
+    required this.text,
   });
 
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -29,7 +31,7 @@ class BackGroundColorWidget extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            AppStrings.emergency,
+            text,
             style: Theme.of(context).textTheme.displayLarge!.copyWith(
               fontSize: 26,
               fontWeight: FontWeight.w500,

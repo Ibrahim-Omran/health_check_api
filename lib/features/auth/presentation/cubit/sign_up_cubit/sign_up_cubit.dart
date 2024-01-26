@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:health_check/features/auth/presentation/cubit/signup_patient_cubit/sign_up_patient_state.dart';
+import 'package:health_check/features/auth/presentation/cubit/sign_up_cubit/sign_up_state.dart';
 
-class SignUpPatientCubit extends Cubit<SignUpPatientState> {
-  SignUpPatientCubit() : super(SignUpPatientInitial());
+class SignUpCubit extends Cubit<SignUpState> {
+  SignUpCubit() : super(SignUpInitial());
 
   GlobalKey<FormState> signUpPatientKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
@@ -31,6 +31,13 @@ class SignUpPatientCubit extends Cubit<SignUpPatientState> {
     isConfirmPasswordSowing ? Icons.visibility : Icons.visibility_off;
 
     emit(ChangeConfirmPasswordSuffixIcon());
+  }
+
+  String typeVal = 'patient';
+
+  void changeTypeAccount(val) {
+    typeVal = val;
+    emit(ChangeTypeAccountState());
   }
 
 }
