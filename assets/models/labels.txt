@@ -1,4 +1,4 @@
-Pneumonia-Viral
-Pneumonia-Bacterial
-Normal
 COVID-19
+Normal
+Pneumonia-Bacterial
+Pneumonia-Viral

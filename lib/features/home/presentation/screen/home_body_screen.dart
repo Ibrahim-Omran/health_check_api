@@ -15,7 +15,7 @@ class HomeBodyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 26.w),
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +77,39 @@ class HomeBodyScreen extends StatelessWidget {
                       url: AppAssets.findDoctor,
                       title: AppStrings.findDoctor,
                       onTap: (){
+                        navigate(context: context, route: Routes.findDoctor);
+                      },
+                    ),
 
+                  ],
+                ),
+              ).animate().fade(delay: 50.ms).scale(duration: 700.ms),
+
+              SizedBox(
+                height: 10.h,
+              ),
+
+              FittedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    CategoryComponent(
+                      url: AppAssets.hospital,
+                      title: AppStrings.hospital,
+                      onTap: (){
+                       // navigate(context: context, route: Routes.xRay);
+
+                      },
+                    ),
+
+                    const SizedBox(width: 10,),
+
+                    CategoryComponent(
+                      url: AppAssets.medicines,
+                      title: AppStrings.medicines,
+                      onTap: (){
+                       // navigate(context: context, route: Routes.findDoctor);
                       },
                     ),
 
@@ -88,33 +120,6 @@ class HomeBodyScreen extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-
-              // FittedBox(
-              //   child: Row(
-              //     crossAxisAlignment: CrossAxisAlignment.center,
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       CategoryComponent(
-              //         url: AppAssets.scanXrayOne,
-              //         title: AppStrings.scanXray,
-              //         onTap: (){
-              //
-              //         },
-              //       ),
-              //
-              //       const SizedBox(width: 10,),
-              //
-              //       CategoryComponent(
-              //         url: AppAssets.scanXrayOne,
-              //         title: AppStrings.scanXray,
-              //         onTap: (){
-              //
-              //         },
-              //       ),
-              //
-              //     ],
-              //   ),
-              // ),
 
 
 

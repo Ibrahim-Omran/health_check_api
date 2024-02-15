@@ -129,45 +129,45 @@ class SignUpScreen extends StatelessWidget {
                           ),
 
                           // patient or doctor
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                // patient
-                                Row(
-                                  children: [
-                                    Radio(
-                                      activeColor: AppColors.primary,
-                                      value: 'patient',
-                                      groupValue: cubit.typeVal,
-                                      onChanged: (val) {
-                                        cubit.changeTypeAccount(val);
-                                      },
-                                    ),
-                                    const Text(AppStrings.patient),
-                                  ],
-                                ),
-
-                                const Spacer(),
-
-                                //doctor
-                                Row(
-                                  children: [
-                                    Radio(
-                                      activeColor: AppColors.primary,
-                                      value: 'doctor',
-                                      groupValue: cubit.typeVal,
-                                      onChanged: (val) {
-                                        cubit.changeTypeAccount(val);
-                                      },
-                                    ),
-                                    const Text(AppStrings.doctor),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.symmetric(horizontal: 10),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.start,
+                          //     children: [
+                          //       // patient
+                          //       Row(
+                          //         children: [
+                          //           Radio(
+                          //             activeColor: AppColors.primary,
+                          //             value: 'patient',
+                          //             groupValue: cubit.typeVal,
+                          //             onChanged: (val) {
+                          //               cubit.changeTypeAccount(val);
+                          //             },
+                          //           ),
+                          //           const Text(AppStrings.patient),
+                          //         ],
+                          //       ),
+                          //
+                          //       const Spacer(),
+                          //
+                          //       //doctor
+                          //       Row(
+                          //         children: [
+                          //           Radio(
+                          //             activeColor: AppColors.primary,
+                          //             value: 'doctor',
+                          //             groupValue: cubit.typeVal,
+                          //             onChanged: (val) {
+                          //               cubit.changeTypeAccount(val);
+                          //             },
+                          //           ),
+                          //           const Text(AppStrings.doctor),
+                          //         ],
+                          //       )
+                          //     ],
+                          //   ),
+                          // ),
 
                           SizedBox(
                             height: 10.h,

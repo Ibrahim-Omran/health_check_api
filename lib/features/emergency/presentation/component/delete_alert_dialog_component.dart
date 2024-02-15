@@ -20,7 +20,7 @@ class DeleteAlertDialogComponent extends StatelessWidget {
     return AlertDialog(
       content: Text(
         AppStrings.delete,
-        style: Theme.of(context).textTheme.displayLarge,
+        style: Theme.of(context).textTheme.displaySmall!.copyWith(fontSize: 25),
       ),
       actions: [
         Center(

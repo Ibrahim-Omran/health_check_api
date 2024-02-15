@@ -30,84 +30,82 @@ class ContactsComponent extends StatelessWidget {
           },);
         },
         borderRadius: const BorderRadius.all(Radius.circular(20)),
-        child: Flexible(
-          child: Container(
-            width: double.infinity,
-            decoration:  BoxDecoration(
-              border: Border.all(color: AppColors.black),
-              color: AppColors.colorContacts,
-              borderRadius: BorderRadius.circular(20),
+        child: Container(
+          width: double.infinity,
+          decoration:  BoxDecoration(
+            border: Border.all(color: AppColors.black),
+            color: AppColors.colorContacts,
+            borderRadius: BorderRadius.circular(20),
 
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                children: [
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: Row(
+              children: [
 
-                  Flexible(
-                    flex: 3,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Name Contacts
-                        Text(
-                          contactsModel.name,
-                          style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black),
-                        ),
+                Flexible(
+                  flex: 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Name Contacts
+                      Text(
+                        contactsModel.name,
+                        style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black),
+                      ),
 
-                        SizedBox(
-                          height: 5.h,
-                        ),
+                      SizedBox(
+                        height: 5.h,
+                      ),
 
-                        // Icon calling and phone number
-                        Row(
-                          children: [
+                      // Icon calling and phone number
+                      Row(
+                        children: [
 
-                            const Icon(
-                              IconlyLight.calling,
-                              size: 29,
+                          const Icon(
+                            IconlyLight.calling,
+                            size: 29,
+                          ),
+
+                          SizedBox(
+                            width: 10.w,
+                          ),
+
+                          // Phone Number
+                          Flexible(
+                            child: Text(
+                              contactsModel.number,
+                              overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black),
                             ),
+                          ),
+                        ],
+                      ),
 
-                            SizedBox(
-                              width: 10.w,
-                            ),
-
-                            // Phone Number
-                            Flexible(
-                              child: Text(
-                                contactsModel.number,
-                                overflow: TextOverflow.ellipsis,
-                                style: Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColors.black),
-                              ),
-                            ),
-                          ],
-                        ),
-
-                      ],
-                    ),
+                    ],
                   ),
+                ),
 
-                  // Calling Button
-                  Flexible(
-                    flex: 2,
-                    child: CustomButton(
-                      width: 150,
-                      height: 60,
-                      background: AppColors.green,
-                      onPressed: () async{
-                        // call now
-                        cubit.makePhoneCall(contactsModel.number.toString());
-                        },
-                      text: AppStrings.callNow,
-                      fontSize: 20.spMin,
-                      fontWeight: FontWeight.w500,
+                // Calling Button
+                Flexible(
+                  flex: 2,
+                  child: CustomButton(
+                    width: 150,
+                    height: 60,
+                    background: AppColors.green,
+                    onPressed: () async{
+                      // call now
+                      cubit.makePhoneCall(contactsModel.number.toString());
+                      },
+                    text: AppStrings.callNow,
+                    fontSize: 20.spMin,
+                    fontWeight: FontWeight.w500,
 
 
-                    ),
                   ),
+                ),
 
-                ],
-              ),
+              ],
             ),
           ),
         ),

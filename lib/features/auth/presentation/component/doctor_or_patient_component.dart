@@ -7,6 +7,7 @@ import 'package:health_check/core/utils/commons.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
+import '../../../../core/widget/custom_buttom.dart';
 
 class DoctorOrPatientComponent extends StatelessWidget {
   const DoctorOrPatientComponent({super.key});
@@ -48,7 +49,7 @@ class DoctorOrPatientComponent extends StatelessWidget {
             InkWell(
               onTap: () {
                 // navigate to sign up doctor..
-               // navigate(context: context, route: Routes.signUpDoctor);
+               navigate(context: context, route: Routes.signUpDoctor);
               },
               child: Text(
                 AppStrings.doctor,
@@ -89,7 +90,7 @@ class DoctorOrPatientComponent extends StatelessWidget {
             InkWell(
               onTap: () {
                 // navigate to sign up patient..
-               // navigate(context: context, route: Routes.signUp);
+               navigate(context: context, route: Routes.signUp);
               },
               child: Text(
                 AppStrings.patient,

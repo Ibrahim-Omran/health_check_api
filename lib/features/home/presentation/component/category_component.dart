@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,6 +10,7 @@ class CategoryComponent extends StatelessWidget {
     required this.url,
     required this.title,
   });
+
   final void Function()? onTap;
   final String url;
   final String title;
@@ -23,16 +23,19 @@ class CategoryComponent extends StatelessWidget {
       child: Container(
         height: 250.h,
         width: 200.w,
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
           color: AppColors.lightBlue.withOpacity(0.6),
           borderRadius: const BorderRadius.all(Radius.circular(30)),
         ),
         child: Column(
           children: [
             Image.asset(
-              url,
-              fit: BoxFit.fill,
               width: double.infinity,
+              height: 160.h,
+              url,
+              fit: BoxFit.cover,
+
+              //width: double.infinity,
             ),
             SizedBox(
               height: 30.h,
@@ -40,9 +43,9 @@ class CategoryComponent extends StatelessWidget {
             Text(
               title,
               style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
           ],
         ),

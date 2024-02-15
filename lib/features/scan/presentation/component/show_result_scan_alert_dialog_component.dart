@@ -10,7 +10,7 @@ class ShowResultAlertDialogComponent extends StatelessWidget {
     return AlertDialog(
       content: Text(
         title,
-        style: Theme.of(context).textTheme.displayLarge,
+        style: Theme.of(context).textTheme.displaySmall!.copyWith(fontSize: 20),
       ),
       actions: [
         Center(

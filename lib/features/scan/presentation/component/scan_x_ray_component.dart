@@ -28,7 +28,7 @@ class ScanXRayComponent extends StatelessWidget {
           width: double.infinity,
           height: 254.h,
           decoration: BoxDecoration(
-            color: AppColors.colorContacts,
+            color: AppColors.lightBlue,
             border: Border.all(color: AppColors.black),
             borderRadius: BorderRadius.circular(20),
           ),

@@ -13,10 +13,14 @@ class AppAssets{
   static const String onBoardingImage2 = "${baseUrl}onBoardingTwo.png";
   static const String onBoardingImage3 = "${baseUrl}onBoardingThree.png";
 
+  static const String hospital = "${baseUrl}hospital.png";
+  static const String medicines = "${baseUrl}medicines.png";
+
 
   static const String scanXray = "${baseUrl}scanXray.png";
   static const String chestXray = "${baseUrl}chest_x_ray.png";
   static const String skullXray = "${baseUrl}X_Ray_Skull.png";
+  static const String scanSkullXray = "${baseUrl}skull_image.png";
   static const String scanChestXray = "${baseUrl}scan_chest.png";
   static const String findDoctor = "${baseUrl}findDoctor.png";
 

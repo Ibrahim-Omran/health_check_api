@@ -114,44 +114,44 @@ class LoginScreen extends StatelessWidget {
                           ),
 
                           SizedBox(
-                            height: 30.h,
+                            height: 20.h,
                           ),
 
 
                           // new member
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                AppStrings.newMember,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .displayMedium!
-                                    .copyWith(fontSize: 18),
-                              ),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   children: [
+                          //     Text(
+                          //       AppStrings.newMember,
+                          //       style: Theme.of(context)
+                          //           .textTheme
+                          //           .displayMedium!
+                          //           .copyWith(fontSize: 18),
+                          //     ),
+                          //
+                          //     // SizedBox(
+                          //     //   width: 5.w,
+                          //     // ),
+                          //     // InkWell(
+                          //     //   onTap: (){
+                          //     //     // navigate to sign up doctor..
+                          //     //     navigate(context: context, route: Routes.signUp);
+                          //     //   },
+                          //     //   child: Text(
+                          //     //     AppStrings.signUp,
+                          //     //     style: Theme.of(context)
+                          //     //         .textTheme
+                          //     //         .displayLarge!
+                          //     //         .copyWith(color: AppColors.primary),
+                          //     //   ),
+                          //     // ),
+                          //   ],
+                          // ),
 
-                              SizedBox(
-                                width: 5.w,
-                              ),
-                              InkWell(
-                                onTap: (){
-                                  // navigate to sign up doctor..
-                                  navigate(context: context, route: Routes.signUp);
-                                },
-                                child: Text(
-                                  AppStrings.signUp,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .displayLarge!
-                                      .copyWith(color: AppColors.primary),
-                                ),
-                              ),
-                            ],
-                          ),
 
-
-                          // doctor OR patient
-                           //const DoctorOrPatientComponent(),
+                          //doctor OR patient
+                           const DoctorOrPatientComponent(),
 
                         ],
                       ),

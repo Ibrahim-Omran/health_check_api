@@ -65,6 +65,8 @@ class AppStrings {
   static const String category = "Category";
   static const String emergency = "Emergency";
   static const String scanXray = "Scan Xray";
+  static const String hospital = "Hospitals";
+  static const String medicines = "Online Medicines";
 
   // Emergency
   static const String contacts = "Contacts";
@@ -78,6 +80,12 @@ class AppStrings {
   static const String xRayChestTwo = "X_Ray Chest";
   static const String xRaySkull = "X_Ray\nSkull ";
   static const String xRaySkullTwo = "X_Ray Skull ";
+  static const String selectImageFrom = "Select Image From ?";
+  static const String noImageSelected = "'No Image Selected !'";
+  static const String camera = "Camera";
+  static const String gallery = "Gallery";
+  static const String upload = "Upload";
+  static const String scan = "Scan";
 
   // Find Doctor
   static const String findDoctor = "Find Doctor";

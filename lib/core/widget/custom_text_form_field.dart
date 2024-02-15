@@ -14,7 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIconOnPressed,
     this.keyboardType,
     this.readOnly = false,
-    this.enabledBorder, this.focusedBorder, this.hintStyle,
+    this.enabledBorder, this.focusedBorder, this.hintStyle, this.border, this.filled, this.fillColor,
   });
 
   final TextEditingController? controller;
@@ -28,6 +28,9 @@ class CustomTextFormField extends StatelessWidget {
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
   final TextStyle? hintStyle;
+  final InputBorder? border;
+  final bool? filled;
+  final Color? fillColor;
 
   final bool readOnly;
   @override
@@ -44,6 +47,9 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         labelText: labelText,
         hintStyle: hintStyle,
+        border: border,
+        filled: filled,
+        fillColor: fillColor,
         //contentPadding: const EdgeInsets.only( bottom: 10),
 
 
@@ -55,7 +61,7 @@ class CustomTextFormField extends StatelessWidget {
           onPressed: suffixIconOnPressed,
           icon: Icon(
             iconSuffix,
-            color: AppColors.grey,
+            color: AppColors.black,
           ),
         ),
       ),

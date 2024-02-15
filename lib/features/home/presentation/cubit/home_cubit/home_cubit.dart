@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:health_check/features/auth/presentation/screen/login_screen.dart';
 import 'package:health_check/features/home/presentation/screen/home_body_screen.dart';
+import 'package:health_check/features/home/presentation/screen/profile_screen.dart';
 
+import '../../../../../core/database/cache/cache_helper.dart';
+import '../../../../../core/service/service_locator.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
@@ -11,13 +14,26 @@ class HomeCubit extends Cubit<HomeState> {
 
   List<Widget> screens = [
     const HomeBodyScreen(),
-    const LoginScreen(),
+    const ProfileScreen(),
   ];
   int currentIndex = 0;
 
   void changeIndex(index){
     currentIndex = index ;
     emit(ChangeIndexState());
+  }
+
+  bool isDark = false ;
+  void changeTheme()async{
+    isDark = !isDark ;
+    await sl<CacheHelper>().saveData(key: 'isDark', value: isDark);
+    emit(ChangeThemeState());
+
+  }
+
+  void getTheme()async{
+    isDark = await sl<CacheHelper>().getData(key: 'isDark');
+    emit(GetThemeState());
   }
 
 

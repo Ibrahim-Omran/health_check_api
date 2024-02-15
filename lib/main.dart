@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:health_check/features/auth/presentation/cubit/signup_doctor_cubit/sign_up_doctor_cubit.dart';
+import 'package:health_check/features/scan/presentation/cubit/chest_cubit/chest_cubit.dart';
 import 'app/app.dart';
 import 'core/database/cache/cache_helper.dart';
 import 'core/database/cache/sqflite_helper.dart';
@@ -24,13 +26,20 @@ void main() async{
           create: (context) => sl<LoginCubit>(),
         ),
 
-
         BlocProvider(
           create: (context) => sl<SignUpCubit>(),
         ),
+        BlocProvider(
+          create: (context) => sl<SignUpDoctorCubit>(),
+        ),
+
 
         BlocProvider(
-          create: (context) => sl<HomeCubit>(),
+          create: (context) => sl<HomeCubit>()..getTheme(),
+        ),
+
+        BlocProvider(
+          create: (context) => sl<ScanXrayChestCubit>(),
         ),
 
         BlocProvider(
