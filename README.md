@@ -15,7 +15,7 @@ link : https://youtu.be/H1hUnvHd4Mg?si=mmJwHkIMENQ0E2_2
 
 6- Go to the pubspec.yaml file in the project files, then click pub.get 
 
+7- Run the program from the green triangle sign in the top bar
+
 If an error appears due to using a library called tflite, you can follow the steps in this video to solve the problem
 link: https://youtu.be/uzPv10jdC9k?si=-43j_CtkOpwsJSpF
-
-7- Run the program from the green triangle sign in the top bar
