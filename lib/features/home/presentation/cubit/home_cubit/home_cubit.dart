@@ -23,18 +23,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(ChangeIndexState());
   }
 
-  bool isDark = false ;
-  void changeTheme()async{
-    isDark = !isDark ;
-    await sl<CacheHelper>().saveData(key: 'isDark', value: isDark);
-    emit(ChangeThemeState());
 
-  }
-
-  void getTheme()async{
-    isDark = await sl<CacheHelper>().getData(key: 'isDark');
-    emit(GetThemeState());
-  }
 
 
 }

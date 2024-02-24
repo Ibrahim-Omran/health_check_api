@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:health_check/core/bloc/cubit/global_cubit.dart';
+import 'package:health_check/core/bloc/cubit/global_state.dart';
 import '../utils/app_colors.dart';
 
 
@@ -35,36 +38,44 @@ class CustomTextFormField extends StatelessWidget {
   final bool readOnly;
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      cursorColor: AppColors.grey,
-      validator: validator,
-      obscureText: obscureText,
-      keyboardType: keyboardType,
-      readOnly: readOnly,
-      decoration: InputDecoration(
-        //border: BorderSide(color: AppColors.grey),
-        hintText: hintText,
-        labelText: labelText,
-        hintStyle: hintStyle,
-        border: border,
-        filled: filled,
-        fillColor: fillColor,
-        //contentPadding: const EdgeInsets.only( bottom: 10),
-
-
-        //icon: Icon(Icons.face),
-        enabledBorder: enabledBorder,
-        focusedBorder: focusedBorder,
-
-        suffixIcon: IconButton(
-          onPressed: suffixIconOnPressed,
-          icon: Icon(
-            iconSuffix,
-            color: AppColors.black,
+    return BlocBuilder<GlobalCubit,GlobalState>(
+      builder: (context,state) {
+        final cubit = BlocProvider.of<GlobalCubit>(context);
+        return TextFormField(
+          controller: controller,
+          cursorColor: AppColors.grey,
+          validator: validator,
+          obscureText: obscureText,
+          keyboardType: keyboardType,
+          readOnly: readOnly,
+          style: TextStyle(
+            color: cubit.isDark? AppColors.white : AppColors.black,
           ),
-        ),
-      ),
+          decoration: InputDecoration(
+            //border: BorderSide(color: AppColors.grey),
+            hintText: hintText,
+            labelText: labelText,
+            hintStyle: hintStyle,
+            border: border,
+            filled: filled,
+            fillColor: fillColor,
+            //contentPadding: const EdgeInsets.only( bottom: 10),
+
+
+            //icon: Icon(Icons.face),
+            enabledBorder: enabledBorder,
+            focusedBorder: focusedBorder,
+
+            suffixIcon: IconButton(
+              onPressed: suffixIconOnPressed,
+              icon: Icon(
+                iconSuffix,
+                color: cubit.isDark? AppColors.white : AppColors.black,
+              ),
+            ),
+          ),
+        );
+      }
     );
   }
 }

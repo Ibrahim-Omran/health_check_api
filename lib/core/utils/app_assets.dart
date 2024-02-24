@@ -15,6 +15,8 @@ class AppAssets{
 
   static const String hospital = "${baseUrl}hospital.png";
   static const String medicines = "${baseUrl}medicines.png";
+  static const String profile = "${baseUrl}profile.jpg";
+  static const String hospitalImage = "${baseUrl}hospitals.jpg";
 
 
   static const String scanXray = "${baseUrl}scanXray.png";

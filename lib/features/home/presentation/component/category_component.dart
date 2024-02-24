@@ -21,7 +21,7 @@ class CategoryComponent extends StatelessWidget {
       onTap: onTap,
       borderRadius: const BorderRadius.all(Radius.circular(30)),
       child: Container(
-        height: 250.h,
+        height: 230.h,
         width: 200.w,
         decoration: BoxDecoration(
           color: AppColors.lightBlue.withOpacity(0.6),
@@ -31,9 +31,9 @@ class CategoryComponent extends StatelessWidget {
           children: [
             Image.asset(
               width: double.infinity,
-              height: 160.h,
+              height: 150.h,
               url,
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
 
               //width: double.infinity,
             ),

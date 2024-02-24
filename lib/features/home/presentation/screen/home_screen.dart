@@ -14,27 +14,29 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(builder: (context, state) {
       final cubit = BlocProvider.of<HomeCubit>(context);
-      return Scaffold(
-          body: cubit.screens[cubit.currentIndex],
-          bottomNavigationBar: CustomGNavWidget(
-            currentIndex: cubit.currentIndex,
-            onChanged: (value) {
-              cubit.changeIndex(value);
-            },
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: AppStrings.home,
-                iconColor: AppColors.white,
-              ),
-              GButton(
-                icon: Icons.person,
-                text: AppStrings.profile,
-                iconColor: AppColors.white,
+      return SafeArea(
+        child: Scaffold(
+            body: cubit.screens[cubit.currentIndex],
+            bottomNavigationBar: CustomGNavWidget(
+              currentIndex: cubit.currentIndex,
+              onChanged: (value) {
+                cubit.changeIndex(value);
+              },
+              tabs: const [
+                GButton(
+                  icon: Icons.home,
+                  text: AppStrings.home,
+                  iconColor: AppColors.white,
+                ),
+                GButton(
+                  icon: Icons.person,
+                  text: AppStrings.profile,
+                  iconColor: AppColors.white,
 
-              ),
-            ],
-          ));
+                ),
+              ],
+            )),
+      );
     });
   }
 }

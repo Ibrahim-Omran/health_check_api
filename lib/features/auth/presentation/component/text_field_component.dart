@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:health_check/core/bloc/cubit/global_cubit.dart';
+import 'package:health_check/core/bloc/cubit/global_state.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/widget/custom_text_form_field.dart';
@@ -39,10 +42,15 @@ class TextFieldComponent extends StatelessWidget {
         ),
         Column(
           children: [
-            Icon(
-              icon,
-              color: AppColors.black,
+            BlocBuilder<GlobalCubit,GlobalState>(
+            builder: (context,state) {
+              final cubit = BlocProvider.of<GlobalCubit>(context);
+              return Icon(
+                  icon,
+                  color: cubit.isDark? AppColors.white : AppColors.black,
 
+                );
+              }
             ),
             SizedBox(
               height: 9.h,

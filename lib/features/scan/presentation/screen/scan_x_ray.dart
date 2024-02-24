@@ -8,6 +8,7 @@ import 'package:health_check/features/scan/presentation/cubit/chest_cubit/chest_
 
 import '../../../../core/routes/app_routes.dart';
 import '../../../../core/utils/app_strings.dart';
+import '../../../../core/widget/app_bar_widget.dart';
 import '../../../../core/widget/back_ground_color_widget.dart';
 import '../component/scan_x_ray_component.dart';
 
@@ -18,43 +19,44 @@ class ScanXRay extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BlocBuilder<ScanXrayChestCubit,ScanXrayChestState>(
-          builder: (context,state){
-            final cubit = BlocProvider.of<ScanXrayChestCubit>(context);
-            return Column(
-              children: [
-                const BackGroundColorWidget(text: AppStrings.scanXray),
+          body: BlocBuilder<ScanXrayChestCubit,ScanXrayChestState>(
+            builder: (context,state){
+              final cubit = BlocProvider.of<ScanXrayChestCubit>(context);
+              return Column(
+                children: [
 
-                ScanXRayComponent(
-                  title: AppStrings.xRayChest,
-                  image: AppAssets.chestXray,
-                  onTap: () {
-                    cubit.model = 'assets/models/model_v1.tflite';
-                    cubit.label = 'assets/models/labels.txt';
-                    cubit.loadDataModelFile();
-                    navigate(context: context, route: Routes.chest);
-                  },
-                ),
+                  const AppBarWidget(text: AppStrings.xRayChestTwo),
 
-                SizedBox(
-                  height: 32.h,
-                ),
+                  ScanXRayComponent(
+                    title: AppStrings.xRayChest,
+                    image: AppAssets.chestXray,
+                    onTap: () {
+                      cubit.model = 'assets/models/model_v1.tflite';
+                      cubit.label = 'assets/models/labels.txt';
+                      cubit.loadDataModelFile();
+                      navigate(context: context, route: Routes.chest);
+                    },
+                  ),
 
-                ScanXRayComponent(
-                  title: AppStrings.xRaySkull,
-                  image: AppAssets.skullXray,
-                  onTap: () {
-                    cubit.model = 'assets/models/model_v1.tflite';
-                    cubit.label = 'assets/models/labels.txt';
-                    cubit.loadDataModelFile();
-                    navigate(context: context, route: Routes.xSkull);
+                  SizedBox(
+                    height: 32.h,
+                  ),
 
-                  },
-                ),
-              ],
-            );
-          },
-        )
+                  ScanXRayComponent(
+                    title: AppStrings.xRaySkull,
+                    image: AppAssets.skullXray,
+                    onTap: () {
+                      cubit.model = 'assets/models/model_v1.tflite';
+                      cubit.label = 'assets/models/labels.txt';
+                      cubit.loadDataModelFile();
+                      navigate(context: context, route: Routes.xSkull);
+
+                    },
+                  ),
+                ],
+              );
+            },
+          )
       ),
     );
   }

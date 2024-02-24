@@ -78,8 +78,8 @@ class AppStrings {
   // Scan Xray
   static const String xRayChest = "X_Ray\nChest";
   static const String xRayChestTwo = "X_Ray Chest";
-  static const String xRaySkull = "X_Ray\nSkull ";
-  static const String xRaySkullTwo = "X_Ray Skull ";
+  static const String xRaySkull = "MRI\nBrain ";
+  static const String xRaySkullTwo = "MRI Brain ";
   static const String selectImageFrom = "Select Image From ?";
   static const String noImageSelected = "'No Image Selected !'";
   static const String camera = "Camera";

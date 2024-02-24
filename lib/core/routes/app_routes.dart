@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:health_check/features/auth/presentation/screen/on_boarding_screen.dart';
 import 'package:health_check/features/auth/presentation/screen/sign_up_doctor_screen.dart';
 import 'package:health_check/features/auth/presentation/screen/sign_up_screen.dart';
-import 'package:health_check/features/doctor/presentation/screen/find_doctor_screen.dart';
 import 'package:health_check/features/emergency/presentation/screen/emergency_screen.dart';
 import 'package:health_check/features/home/presentation/screen/home_screen.dart';
+import 'package:health_check/features/hospitals/presentation/screen/hospitals_screen.dart';
 import 'package:health_check/features/scan/presentation/screen/scan_chest_screen.dart';
 import 'package:health_check/features/scan/presentation/screen/scan_x_ray.dart';
 import '../../features/auth/presentation/screen/login_screen.dart';
 import '../../features/auth/presentation/screen/splash_screen.dart';
+import '../../features/doctor/presentation/screen/find_doctor_screen.dart';
 import '../../features/scan/presentation/screen/scan_skull_screen.dart';
 
 
@@ -25,6 +26,7 @@ class Routes {
   static const String xRay = '/xray';
   static const String xSkull = '/xSkull';
   static const String findDoctor = '/findDoctor';
+  static const String hospitalsScreen = '/hospitalsScreen';
 
 
 
@@ -55,6 +57,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const ScanSkullXray());
       case Routes.findDoctor:
         return MaterialPageRoute(builder: (_) => const FindDoctorScreen());
+      case Routes.hospitalsScreen:
+        return MaterialPageRoute(builder: (_) => const HospitalsScreen());
 
       default:
         return MaterialPageRoute(
