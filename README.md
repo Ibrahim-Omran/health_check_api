@@ -2,10 +2,13 @@
 
 1- download Dark SDK And Flutter SDk 
 link : https://youtu.be/VOfsxFSb3Fs?si=qzpJ7UYC86NRyGCp
+
 2- download Android Studio OR VS Code 
 link : https://youtu.be/wYVWrlxcnNU?si=aWALzM5WoFsoRjS2
+
 3- download emulator 
 link : https://youtu.be/H1hUnvHd4Mg?si=mmJwHkIMENQ0E2_2
+
 4- Download the Source Code for this program
 5- Open the source code inside Android Studio OR VS Code
 6- Go to the pubspec.yaml file in the project files, then click pub.get 
